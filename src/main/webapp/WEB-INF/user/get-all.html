@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<body>
+<table style="width: 100%">
+
+
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>LAST NAME</td>
+        <td>AGE</td>
+        <td>GENDER</td>
+    </tr>
+    <!--/*@thymesVar id="userList" type="CookieExample"*/-->
+    <tr th:each="user:${userList}">
+        <!--/*@thymesVar id="id" type="CookieExample"*/-->
+        <td style="..." th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.lastName}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${user.gender}">
+
+        </td>
+        <td th:text="${user.id}"></td>
+
+    </tr>
+</table>
+
+</body>
+</html>
+
